@@ -32,24 +32,21 @@ ENV PATH            "${PATH}:${NANOS_BIN_DIR}:${MCXX_BIN_DIR}"
 ENV LD_LIBRARY_PATH "${LD_LIBRARY_PATH}:${NANOS_LIB_DIR}:${MCXX_LIB_DIR}"
 
 # Install LAB source code
-RUN mkdir -p /home/ubuntu/labs && \
-    cd /home/ubuntu/labs && \
+RUN cd /home/ubuntu && \
     git clone https://github.com/Hopobcn/FWI.git FWI && cd FWI && \
-    git checkout gtc2017-sol-step1 && \
-    git checkout gtc2017-sol-step2 && \
-    git checkout gtc2017-sol-step3 && \
-    git checkout gtc2017-sol-step4 && \
-    git checkout gtc2017-sol-step5 && \
-    git checkout gtc2017-sol-step6 && \
+    git checkout gtc2017eu-step1-sol && \
+    git checkout gtc2017eu-step2-sol && \
+    git checkout gtc2017eu-step3-sol && \
+    git checkout gtc2017eu-step4-sol && \
+    git checkout gtc2017eu-step5-sol && \
+    git checkout gtc2017eu-step6-sol && \
     git checkout ompss-openacc && \
-    git checkout gtc2017 && \
-    cd - && \
-    git clone https://github.com/Hopobcn/FWI.git FWI-sol-step1 && cd FWI-sol-step1 && git checkout gtc2017-sol-step1 && cd - && \
-    git clone https://github.com/Hopobcn/FWI.git FWI-sol-step2 && cd FWI-sol-step2 && git checkout gtc2017-sol-step1 && git checkout gtc2017-sol-step2 && cd - && \
-    git clone https://github.com/Hopobcn/FWI.git FWI-sol-step3 && cd FWI-sol-step3 && git checkout gtc2017-sol-step2 && git checkout gtc2017-sol-step3 && cd - && \
-    git clone https://github.com/Hopobcn/FWI.git FWI-sol-step4 && cd FWI-sol-step4 && git checkout gtc2017-sol-step3 && git checkout gtc2017-sol-step4 && cd - && \
-    git clone https://github.com/Hopobcn/FWI.git FWI-sol-step5 && cd FWI-sol-step5 && git checkout gtc2017-sol-step4 && git checkout gtc2017-sol-step5 && cd - && \
-    git clone https://github.com/Hopobcn/FWI.git FWI-sol-step6 && cd FWI-sol-step6 && git checkout gtc2017-sol-step5 && git checkout gtc2017-sol-step6 && cd - && \
-    git clone https://github.com/Hopobcn/FWI.git FWI-sol-ompss-acc && cd FWI-sol-ompss-acc && git checkout ompss-openacc && cd -
+    git checkout gtc2017eu-step6 && \
+    git checkout gtc2017eu-step5 && \
+    git checkout gtc2017eu-step4 && \
+    git checkout gtc2017eu-step3 && \
+    git checkout gtc2017eu-step2 && \
+    git checkout gtc2017eu-step1 && \
+    cd -
 
 
